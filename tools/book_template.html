@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Matilde, Attilio e io</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#FBF0DE;--ink:#2B2626;--card:#FFF8EC;--rose:#C9503C}
+*{box-sizing:border-box;margin:0}
+html{scroll-snap-type:y mandatory;background:var(--ink)}
+body{background:var(--ink);color:var(--ink);font-family:"Fredoka",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+.spacer{height:100vh;height:100svh;scroll-snap-align:start}
+.stage{position:fixed;inset:0;display:grid;place-items:center;overflow:hidden;background:var(--ink)}
+.page{position:absolute;inset:0;display:grid;place-items:center;opacity:0;visibility:hidden;
+      transition:opacity .9s ease,visibility 0s linear .9s;pointer-events:none}
+.page.on{opacity:1;visibility:visible;transition:opacity .9s ease,visibility 0s}
+.frame{position:relative;height:100vh;height:100svh;aspect-ratio:896/1120;max-width:100vw;max-height:calc(100vw*1.25);
+       container-type:inline-size;overflow:hidden;background:var(--cream)}
+@media (max-aspect-ratio:896/1120){.frame{height:auto;width:100vw}}
+.rig{position:absolute;inset:0;width:100%;height:100%}
+.L{position:absolute;display:block}
+.L img{display:block;width:100%;height:100%;user-select:none}
+img.L{width:100%;height:100%;left:0;top:0;user-select:none}
+.actor{position:absolute;inset:0}
+.breath{position:absolute;inset:0}
+.lids{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;overflow:visible}
+.lid{transform-box:fill-box;transform-origin:50% 0;transform:scaleY(0)}
+
+/* caption */
+.cap{position:absolute;left:50%;bottom:5%;transform:translate(-50%,24px);width:84%;text-align:center;opacity:0;
+     background:var(--card);border:.5cqw solid var(--ink);border-radius:3cqw;padding:2.4cqw 3.4cqw;
+     font-weight:600;font-size:5.2cqw;line-height:1.22;box-shadow:.9cqw .9cqw 0 rgba(43,38,38,.9)}
+.page.on .cap{animation:capIn .8s cubic-bezier(.2,.8,.2,1) forwards;animation-delay:var(--capDelay,1.1s)}
+@keyframes capIn{to{opacity:1;transform:translate(-50%,0)}}
+
+/* still pages: gentle paper camera move */
+.kb{transform:scale(1.06)}
+.page.on .kb{animation:kb 3s cubic-bezier(.2,.7,.2,1) forwards}
+@keyframes kb{to{transform:scale(1)}}
+
+/* ---------- page 1 rig ---------- */
+.page.on .p01 .shadows{animation:fade .6s ease both}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+.p01 .shadows{opacity:0}.page.on .p01 .shadows{opacity:1}
+
+.p01 .papa{opacity:0}
+.page.on .p01 .papa{animation:papaIn .9s cubic-bezier(.3,1.4,.5,1) .15s forwards}
+@keyframes papaIn{0%{opacity:0;transform:translateX(-14%) scale(.96,1.04)}55%{opacity:1;transform:translateX(1.5%) scale(1.02,.98)}100%{opacity:1;transform:none}}
+.p01 .mamma{opacity:0}
+.page.on .p01 .mamma{animation:mammaIn .8s cubic-bezier(.2,.9,.3,1.2) .55s forwards}
+@keyframes mammaIn{0%{opacity:0;transform:translateY(5%) scale(.97)}100%{opacity:1;transform:none}}
+
+.p01 .breath{transform-origin:50% 72%}
+.page.on .p01 .breath{animation:breath 3.2s ease-in-out 1s infinite alternate}
+@keyframes breath{from{transform:scaleY(1)}to{transform:scaleY(1.012)}}
+
+.page.on .p01 .arm{animation:wave 1.9s ease-in-out .95s both}
+@keyframes wave{
+  0%{transform:rotate(0)} 12%{transform:rotate(-16deg)} 28%{transform:rotate(11deg)} 44%{transform:rotate(-16deg)}
+  60%{transform:rotate(11deg)} 76%{transform:rotate(-14deg)} 100%{transform:rotate(0)}}
+.page.on .p01 .papa .head{animation:headP 2.4s ease-in-out .9s both,idleP 4.5s ease-in-out 3.3s infinite alternate}
+@keyframes headP{0%{transform:rotate(0)}35%{transform:rotate(-3deg)}70%{transform:rotate(2deg)}100%{transform:rotate(-1deg)}}
+@keyframes idleP{from{transform:rotate(-1deg)}to{transform:rotate(1.5deg)}}
+.page.on .p01 .flowers{animation:sway 2.4s ease-in-out .9s infinite alternate}
+@keyframes sway{from{transform:rotate(-3deg)}to{transform:rotate(3.5deg)}}
+.page.on .p01 .mamma .head{animation:headM 2.2s cubic-bezier(.3,.8,.3,1) 1.2s both,idleM 5s ease-in-out 3.4s infinite alternate}
+@keyframes headM{0%{transform:rotate(0)}100%{transform:rotate(2deg)}}
+@keyframes idleM{from{transform:rotate(2deg)}to{transform:rotate(.8deg)}}
+.p01 .sparkles{opacity:0}
+.page.on .p01 .sparkles{animation:pop .55s cubic-bezier(.3,1.6,.5,1) 1.5s forwards,twinkle 1.6s ease-in-out 2.2s infinite alternate}
+@keyframes pop{0%{opacity:0;transform:scale(.2) rotate(-18deg)}100%{opacity:1;transform:scale(1) rotate(0)}}
+@keyframes twinkle{from{opacity:1;transform:scale(1)}to{opacity:.8;transform:scale(1.07) rotate(2deg)}}
+.page.on .p01 .papa .lid0,.page.on .p01 .papa .lid1{animation:blink 4.6s ease-in-out 2.2s infinite}
+.page.on .p01 .mamma .lid0,.page.on .p01 .mamma .lid1{animation:blink 5.4s ease-in-out 3s infinite}
+@keyframes blink{0%,90%,100%{transform:scaleY(0)}93%,96%{transform:scaleY(1)}}
+
+/* hint + progress */
+.hint{position:fixed;left:50%;bottom:14px;transform:translateX(-50%);color:#FBF0DE;font-size:14px;letter-spacing:.08em;
+      opacity:.0;animation:hint 1s ease 3.2s forwards;pointer-events:none;z-index:5;text-transform:lowercase}
+.hint i{display:block;text-align:center;font-style:normal;animation:bob 1.4s ease-in-out infinite}
+@keyframes hint{to{opacity:.85}} @keyframes bob{50%{transform:translateY(5px)}}
+body.started .hint{display:none}
+.prog{position:fixed;right:10px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:5px;z-index:5}
+.prog b{width:6px;height:6px;border-radius:50%;background:#FBF0DE55;transition:.3s}
+.prog b.on{background:#FBF0DE;transform:scale(1.5)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}.cap{opacity:1;transform:translate(-50%,0)}.p01 .papa,.p01 .mamma,.p01 .shadows,.p01 .sparkles{opacity:1}}
+</style>
+</head>
+<body>
+<main class="stage" id="stage">
+<!--PAGES-->
+</main>
+<div class="hint">scorri<i>⌄</i></div>
+<nav class="prog" id="prog"></nav>
+<div id="spacers"></div>
+<script>
+(function(){
+  var N=__N__, pages=[].slice.call(document.querySelectorAll('.page')), cur=-1;
+  var sp=document.getElementById('spacers'), prog=document.getElementById('prog');
+  for(var i=0;i<N;i++){var d=document.createElement('div');d.className='spacer';sp.appendChild(d);
+    var b=document.createElement('b');prog.appendChild(b);}
+  var dots=[].slice.call(prog.children);
+  function show(i){
+    if(i===cur)return;
+    if(cur>=0){pages[cur].classList.remove('on');}
+    var p=pages[i];
+    // restart animations: force reflow
+    p.classList.remove('on');void p.offsetWidth;p.classList.add('on');
+    dots.forEach(function(x,k){x.classList.toggle('on',k===i)});
+    cur=i;
+  }
+  function onScroll(){
+    var vh=window.innerHeight,y=window.scrollY;
+    if(!vh)return;
+    var i=Math.max(0,Math.min(N-1,Math.round(y/vh)));
+    if(y>20)document.body.classList.add('started');
+    show(i);
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  window.addEventListener('resize',onScroll);
+  setInterval(onScroll,150); // safety net when scroll events are throttled
+  document.addEventListener('keydown',function(e){
+    var k=e.key,vh=window.innerHeight;
+    if(k==='ArrowDown'||k===' '||k==='PageDown'){e.preventDefault();window.scrollTo({top:Math.min(N-1,cur+1)*vh,behavior:'smooth'});}
+    if(k==='ArrowUp'||k==='PageUp'){e.preventDefault();window.scrollTo({top:Math.max(0,cur-1)*vh,behavior:'smooth'});}
+  });
+  window.scrollTo(0,0);show(0);
+  // the first page waits a beat so the opening animation is seen
+  pages[0].style.setProperty('--capDelay','1.6s');
+})();
+</script>
+</body>
+</html>

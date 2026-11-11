@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brand Manual Mascotte</title>
+<style>
+  :root{
+    --cream:#FBF0DE; --ink:#2B2626; --olive:#8E9A32; --khaki:#8A7A2E; --skin:#F2A365;
+    --green:#4B7A3A; --blue:#4C72A6; --sand:#E3B77A; --card:#FFF8EC; --line:#E8D6B8;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--cream);color:var(--ink);font:16px/1.55 Georgia,"Times New Roman",serif}
+  .wrap{max-width:980px;margin:0 auto;padding:0 16px 64px}
+  header{padding:56px 0 24px;border-bottom:3px solid var(--ink)}
+  header h1{font-size:clamp(34px,6vw,56px);margin:0;line-height:1.05}
+  header p{margin:12px 0 0;font-size:18px;max-width:640px}
+  h2{font-size:28px;margin:48px 0 8px;display:flex;gap:12px;align-items:baseline}
+  h2 span{font:700 14px/1 system-ui,sans-serif;background:var(--ink);color:var(--cream);padding:6px 9px;border-radius:99px}
+  h3{font-size:20px;margin:24px 0 6px}
+  p{margin:8px 0}
+  .grid{display:grid;gap:16px}
+  .g3{grid-template-columns:repeat(3,1fr)}
+  .g2{grid-template-columns:repeat(2,1fr)}
+  @media(max-width:760px){.g3,.g2{grid-template-columns:1fr}}
+  .card{background:var(--card);border:2px solid var(--ink);border-radius:14px;padding:16px}
+  .card img{width:100%;height:auto;border-radius:8px;display:block;background:var(--cream)}
+  .tag{font:600 12px/1 system-ui,sans-serif;text-transform:uppercase;letter-spacing:.06em;color:#6b5a3a}
+  ul{padding-left:20px;margin:8px 0}
+  li{margin:3px 0}
+  pre{white-space:pre-wrap;word-wrap:break-word;background:var(--ink);color:#F6E9D0;padding:14px;border-radius:10px;font:13.5px/1.5 ui-monospace,Consolas,monospace;margin:8px 0}
+  code{font:13.5px ui-monospace,Consolas,monospace;background:#f0e2c6;padding:1px 5px;border-radius:4px}
+  table{border-collapse:collapse;width:100%;background:var(--card);border:2px solid var(--ink);border-radius:10px;overflow:hidden}
+  th,td{text-align:left;padding:8px 12px;border-bottom:1px solid var(--line);vertical-align:top;font-size:15px}
+  th{background:#F1DFBD;font:700 13px system-ui,sans-serif;text-transform:uppercase;letter-spacing:.05em}
+  .sw{display:flex;flex-wrap:wrap;gap:10px;margin:10px 0}
+  .sw div{width:104px;border:2px solid var(--ink);border-radius:10px;overflow:hidden;background:var(--card);font:12px/1.3 system-ui,sans-serif}
+  .sw i{display:block;height:48px}
+  .sw b{display:block;padding:5px 7px 0}
+  .sw small{display:block;padding:0 7px 6px;color:#6b5a3a}
+  .yes,.no{border-left:6px solid;padding:10px 14px;border-radius:8px;background:var(--card)}
+  .yes{border-color:#4B7A3A}.no{border-color:#B5432E}
+  .note{background:#FFF1C9;border:2px dashed #B8963B;border-radius:10px;padding:12px 14px;margin:14px 0}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="tag">Libro illustrato dell'anniversario</div>
+  <h1>Brand Manual<br>delle tre mascotte</h1>
+  <p>Come generare Papà, Mamma e il Piccolo sempre uguali a se stessi, pagina dopo pagina. Versione 1.0, novembre 2026.</p>
+</header>
+
+<h2><span>01</span>Il cast</h2>
+<p>Tre personaggi in stile collage di carta ritagliata. Le immagini qui sotto sono i riferimenti ufficiali: ogni nuova pagina del libro parte da loro.</p>
+<div class="grid g3">
+  <div class="card"><img src="assets/papa.png" alt="Papà"><h3>Papà</h3><div class="tag">Il narratore burbero e tenero</div></div>
+  <div class="card"><img src="assets/mamma.png" alt="Mamma"><h3>Mamma</h3><div class="tag">Il cuore del libro</div></div>
+  <div class="card"><img src="assets/bimbo.png" alt="Il Piccolo"><h3>Il Piccolo</h3><div class="tag">Il piccolo esploratore</div></div>
+</div>
+
+<h2><span>02</span>DNA dello stile</h2>
+<table>
+  <tr><th>Elemento</th><th>Regola</th></tr>
+  <tr><td>Tecnica</td><td>Collage di carta ritagliata: forme piatte e geometriche, texture di carta visibile, ombre di sovrapposizione leggere e nette.</td></tr>
+  <tr><td>Contorni</td><td>Spessi e puliti, mai sfumati.</td></tr>
+  <tr><td>Proporzioni</td><td>Testa leggermente più grande del normale, occhi grandi ed espressivi, corpi morbidi e rotondi. Il Piccolo è il più tondo di tutti.</td></tr>
+  <tr><td>Colori</td><td>Saturi ma caldi, terrosi. Mai neon, mai grigi freddi.</td></tr>
+  <tr><td>Sfondo</td><td>Crema piatto per le mascotte singole. Nelle scene: pochi elementi, stesse texture di carta.</td></tr>
+  <tr><td>Mood</td><td>Libro per bambini degli anni '50-'60, caldo, ironico, affettuoso.</td></tr>
+  <tr><td>Mai</td><td>Fotorealismo, testo dentro l'immagine, 3D, effetti lucidi.</td></tr>
+</table>
+
+<h3>Palette (valori indicativi, presi dalle immagini approvate)</h3>
+<div class="sw">
+  <div><i style="background:#FBF0DE"></i><b>Crema</b><small>#FBF0DE sfondo</small></div>
+  <div><i style="background:#2B2626"></i><b>Inchiostro</b><small>#2B2626 magliette, borse</small></div>
+  <div><i style="background:#F2A365"></i><b>Pelle</b><small>#F2A365 base</small></div>
+  <div><i style="background:#8E9A32"></i><b>Oliva</b><small>#8E9A32 parka Mamma</small></div>
+  <div><i style="background:#8A7A2E"></i><b>Kaki</b><small>#8A7A2E pantaloni Papà</small></div>
+  <div><i style="background:#E3B77A"></i><b>Sabbia</b><small>#E3B77A pantaloni Mamma, cappellino</small></div>
+  <div><i style="background:#4B7A3A"></i><b>Verde bosco</b><small>#4B7A3A piumino Piccolo</small></div>
+  <div><i style="background:#4C72A6"></i><b>Blu calzino</b><small>#4C72A6 calzini Piccolo</small></div>
+</div>
+
+<h2><span>03</span>Schede personaggio</h2>
+
+<div class="card">
+  <h3>Papà</h3>
+  <div class="grid g2">
+    <div>
+      <div class="tag">Tratti fissi</div>
+      <ul>
+        <li>Capelli corti scuri, stempiatura</li>
+        <li>Barba folta scura con striature grigie sul mento</li>
+        <li>Sopracciglia scure, forti ed espressive (una spesso alzata)</li>
+        <li>Corporatura robusta e morbida</li>
+        <li>Occhiali da sole neri infilati nel colletto</li>
+      </ul>
+    </div>
+    <div>
+      <div class="tag">Outfit base</div>
+      <ul>
+        <li>Maglietta nera a maniche corte</li>
+        <li>Pantaloni kaki/oliva con risvolto</li>
+        <li>Sneakers scure con suola crema</li>
+      </ul>
+      <div class="tag">Espressione base</div>
+      <p>Sorriso furbo, sopracciglio alzato, aria di chi la sa lunga.</p>
+    </div>
+  </div>
+  <div class="tag">Foto usate come riferimento</div>
+  <p>Papà sul palco, Papà che parla, ritratto frontale con sopracciglio alzato.</p>
+  <pre>Children's picture-book character illustration of the man in the reference photos, full body, standing, goofy proud expression with one raised eyebrow, on a plain pale background. Bold flat cut-paper collage style with simple geometric shapes, chunky outlines, saturated playful colors, mid-century modern kids-book feel. Keep his recognizable traits: short dark hair with receding hairline, full thick dark beard with grey streaks on the chin, strong expressive dark eyebrows, stocky cuddly build, black t-shirt, olive-khaki trousers, dark sneakers, black sunglasses tucked into the collar of his shirt. Mascot look, not photorealistic, no text.</pre>
+</div>
+
+<div class="card" style="margin-top:16px">
+  <h3>Mamma</h3>
+  <div class="grid g2">
+    <div>
+      <div class="tag">Tratti fissi</div>
+      <ul>
+        <li>Capelli lunghi lisci castano scuro con qualche ciocca grigio argento vicino al viso</li>
+        <li>Occhi grandi marrone caldo</li>
+        <li>Lentiggini leggere sulle guance</li>
+        <li>Orecchini a cerchietto dorati con piccola perla</li>
+      </ul>
+    </div>
+    <div>
+      <div class="tag">Outfit base</div>
+      <ul>
+        <li>Parka verde oliva con cappuccio</li>
+        <li>Maglia a righe bianco e nero</li>
+        <li>Pantaloni beige ampi, stivaletti scuri</li>
+        <li>Piccola borsa nera a tracolla</li>
+      </ul>
+      <div class="tag">Espressione base</div>
+      <p>Sorriso dolce e sereno, sguardo gentile.</p>
+    </div>
+  </div>
+  <div class="tag">Foto usate come riferimento</div>
+  <p>Mamma al caffè, Mamma con il Piccolo con il cappellino, Mamma con il Piccolo sul tappeto.</p>
+  <pre>Children's picture-book character illustration of the woman in the reference photos, full body, standing, playful gentle smile, on a plain pale background. Bold flat cut-paper collage style with simple geometric shapes, chunky outlines, saturated playful colors, mid-century modern kids-book feel. Keep her recognizable traits: long straight dark brown hair with a few silver-grey streaks near the face, light freckles on her cheeks, small gold hoop earrings with a tiny pearl, tender kind expression, olive-green parka jacket over a black-and-white striped top, beige trousers, small black shoulder bag. Mascot look, not photorealistic, no text.</pre>
+</div>
+
+<div class="card" style="margin-top:16px">
+  <h3>Il Piccolo</h3>
+  <div class="grid g2">
+    <div>
+      <div class="tag">Tratti fissi</div>
+      <ul>
+        <li>Circa 9 mesi, forme tondissime</li>
+        <li>Testa enorme, guance rosa, occhioni scuri rotondi</li>
+        <li>Capelli castano chiaro soffici</li>
+        <li>Cosce paffute</li>
+      </ul>
+    </div>
+    <div>
+      <div class="tag">Outfit base</div>
+      <ul>
+        <li>Cappellino di lana beige</li>
+        <li>Piumino verde</li>
+        <li>Calzini blu</li>
+      </ul>
+      <div class="tag">Espressione base</div>
+      <p>Risata aperta e curiosa.</p>
+    </div>
+  </div>
+  <div class="tag">Foto usate come riferimento</div>
+  <p>Il Piccolo nel passeggino, con il cappellino, sul tappeto.</p>
+  <pre>Children's picture-book character illustration of the baby boy in the reference photos (about 9 months old), full body, sitting happily, cheeky giggle, on a plain pale background. Bold flat cut-paper collage style with simple geometric shapes, chunky outlines, saturated playful colors, mid-century modern kids-book feel. Very rounded chubby shapes, oversized head, big round dark brown eyes, rosy cheeks, soft light-brown fluffy hair, chubby thighs. Wearing a cozy beige knit beanie, a green puffer jacket and little blue socks. Mascot look, not photorealistic, no text.</pre>
+</div>
+
+<h2><span>04</span>Come generare una nuova pagina</h2>
+<h3>Impostazioni Higgsfield</h3>
+<table>
+  <tr><th>Parametro</th><th>Valore</th></tr>
+  <tr><td>Modello</td><td><code>gpt_image_2_6</code></td></tr>
+  <tr><td>Formato</td><td><code>3:4</code> verticale (cambiare solo per doppie pagine: <code>4:3</code> o <code>16:9</code>)</td></tr>
+  <tr><td>Qualità</td><td><code>medium</code> per le bozze, <code>high</code> per la versione finale</td></tr>
+  <tr><td>Risoluzione</td><td><code>1k</code> per le bozze, <code>2k</code> per la stampa</td></tr>
+  <tr><td>Riferimenti</td><td>Le mascotte approvate di questo manuale, ruolo <code>image_references</code></td></tr>
+</table>
+
+<h3>ID dei riferimenti ufficiali (job Higgsfield)</h3>
+<table>
+  <tr><th>Personaggio</th><th>ID</th></tr>
+  <tr><td>Papà</td><td><code>9d7e357f-3c1c-457d-9388-6492ccd61fba</code></td></tr>
+  <tr><td>Mamma</td><td><code>e9db81df-f4de-40bd-85ea-53933b6d3ffd</code></td></tr>
+  <tr><td>Il Piccolo</td><td><code>9f04b4ce-6a48-494c-bf01-6d196d0168aa</code></td></tr>
+</table>
+<p>Per ogni pagina si allegano solo i riferimenti dei personaggi presenti nella scena.</p>
+
+<h3>Template del prompt di scena</h3>
+<pre>Children's picture-book page illustration. Characters exactly as in the reference images: [PAPÀ / MAMMA / IL PICCOLO], same faces, same proportions, same outfits unless stated below.
+Scene: [COSA SUCCEDE, DOVE, ORA DEL GIORNO].
+Expressions and poses: [chi fa cosa, con che espressione].
+Style: bold flat cut-paper collage with simple geometric shapes, chunky outlines, visible paper texture, saturated warm earthy palette, mid-century modern kids-book feel, plain or minimal background with a few paper-cut elements.
+Composition: [primo piano / piano medio / campo largo], leave empty space at the [top/bottom] for the caption.
+Not photorealistic, no text, no lettering.</pre>
+
+<h3>Flusso di lavoro</h3>
+<ol>
+  <li>Scrivere la riga di testo della pagina.</li>
+  <li>Compilare il template di scena.</li>
+  <li>Generare 2 bozze con i riferimenti dei personaggi coinvolti.</li>
+  <li>Controllare con la checklist qui sotto.</li>
+  <li>Rigenerare in qualità alta solo la bozza scelta.</li>
+</ol>
+
+<h2><span>05</span>Checklist di coerenza</h2>
+<div class="grid g2">
+  <div class="yes"><b>Deve esserci</b>
+    <ul>
+      <li>Papà: barba con grigio sul mento, sopracciglia forti, occhiali nel colletto</li>
+      <li>Mamma: ciocche grigie, lentiggini, perla all'orecchio</li>
+      <li>Piccolo: cappellino beige, guance rosa, testa grande</li>
+      <li>Texture di carta e contorni netti</li>
+      <li>Colori caldi della palette</li>
+    </ul>
+  </div>
+  <div class="no"><b>Da evitare</b>
+    <ul>
+      <li>Effetto foto o 3D</li>
+      <li>Testo scritto dentro l'immagine (le scritte si aggiungono dopo, nel libro)</li>
+      <li>Cambi di outfit non voluti</li>
+      <li>Barba senza grigio, capelli di Mamma senza ciocche</li>
+      <li>Piccolo con proporzioni da bimbo più grande</li>
+    </ul>
+  </div>
+</div>
+
+<h2><span>06</span>Varianti consentite</h2>
+<table>
+  <tr><th>Cosa</th><th>Come</th></tr>
+  <tr><td>Stagione o luogo</td><td>Cambiare vestiti nel prompt, per esempio "Papà in costume al mare", mantenendo tratti fissi e stile.</td></tr>
+  <tr><td>Espressioni</td><td>Libere, purché resti riconoscibile il tratto base (sopracciglio di Papà, dolcezza di Mamma, risata del Piccolo).</td></tr>
+  <tr><td>Pose e inquadrature</td><td>Libere. Se il personaggio è piccolo nella scena, ripetere comunque i tratti fissi nel prompt.</td></tr>
+  <tr><td>Oggetti ricorrenti</td><td>Passeggino verde oliva, occhiali di Papà, borsa nera di Mamma, peluche azzurro del Piccolo.</td></tr>
+</table>
+
+<h2><span>07</span>Ritocchi da fare alla v1.0</h2>
+<div class="note">
+  <ul>
+    <li>Papà: la pelle è un po' troppo arancione rispetto alle foto, schiarirla leggermente.</li>
+    <li>Mamma: il grigio dei capelli è più marcato che nelle foto, ridurre le ciocche.</li>
+    <li>Il Piccolo: capelli più chiari e più folti.</li>
+  </ul>
+  <p>Questi punti vanno confermati da Paolo e dalla sua compagna prima di ritenere il manuale definitivo.</p>
+</div>
+
+<p class="tag" style="margin-top:40px">Uso privato. Le foto di riferimento non vanno condivise fuori da questo progetto.</p>
+</div>
+</body>
+</html>
