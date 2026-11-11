@@ -123,5 +123,5 @@ def inline(m):
     mime = "image/png" if p.endswith(".png") else "image/jpeg"
     return 'src="data:%s;base64,%s"' % (mime, base64.b64encode(open(p, "rb").read()).decode())
 html = re.sub(r'src="(assets/[^"]+)"', inline, html)
-open(os.path.join(ROOT, "libro.html"), "w", encoding="utf-8").write(html)
-print("libro.html", round(len(html) / 1e6, 1), "MB")
+open(os.path.join(ROOT, "index.html"), "w", encoding="utf-8").write(html)
+print("index.html", round(len(html) / 1e6, 1), "MB")

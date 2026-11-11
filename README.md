@@ -1,6 +1,6 @@
 # Libro dell'anniversario
 
-Apri `book/index.html` in un browser (doppio clic, funziona anche da file). Scorri o usa le frecce.
+Apri `index.html` (versione autonoma, e quella pubblicata su GitHub Pages) oppure `book/index.html` in un browser (doppio clic, funziona anche da file). Scorri o usa le frecce.
 
 ## Struttura
 - `pages/p01..p19.png` tavole statiche approvate (4:5)
